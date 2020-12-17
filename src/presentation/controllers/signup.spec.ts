@@ -82,7 +82,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
 
-  test('Should return 400 if an invalid is provided', () => {
+  test('Should return 400 if an invalid email is provided', () => {
     // sut = System Under Test
     const { sut, emailValidatorStub } = makeSut()
 
