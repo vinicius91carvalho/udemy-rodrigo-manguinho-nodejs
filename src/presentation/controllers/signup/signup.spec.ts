@@ -45,7 +45,6 @@ const makeSut = (): SutTypes => {
 
 describe('SignUp Controller', () => {
   test('Should return 400 if no name is provided', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -60,7 +59,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no email is provided', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -75,7 +73,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no password is provided', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -90,7 +87,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no password confirmation is provided', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -105,7 +101,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if password confirmation fails', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -121,7 +116,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if an invalid email is provided', async () => {
-    // sut = System Under Test
     const { sut, emailValidatorStub } = makeSut()
 
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
@@ -140,7 +134,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should call EmailValidator with correct email', async () => {
-    // sut = System Under Test
     const { sut, emailValidatorStub } = makeSut()
 
     const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
@@ -179,7 +172,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should call AddAccount with correct values', async () => {
-    // sut = System Under Test
     const { sut, addAccountStub } = makeSut()
 
     const addSpy = jest.spyOn(addAccountStub, 'add')
@@ -222,7 +214,6 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 200 if valid data is provided', async () => {
-    // sut = System Under Test
     const { sut } = makeSut()
 
     const httpRequest = {
