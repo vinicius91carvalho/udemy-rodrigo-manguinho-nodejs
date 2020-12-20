@@ -27,8 +27,10 @@ export const MongoHelper = {
 
   map (collection: any): any {
     const { _id, ...collectionWithoutId } = collection
-    collectionWithoutId.id = _id
-    return collectionWithoutId
+    return {
+      id: _id,
+      ...collectionWithoutId
+    }
   }
 
 }
