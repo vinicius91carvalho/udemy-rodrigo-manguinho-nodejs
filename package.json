@@ -1,6 +1,9 @@
 {
   "name": "udemy-rodrigo-manguinho-nodejs",
   "version": "1.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
   "author": "Vinicius Carvalho <vinicius91carvalho@gmail.com>",
   "license": "MIT",
