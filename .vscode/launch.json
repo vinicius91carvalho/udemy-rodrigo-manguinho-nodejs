@@ -5,15 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Jest Tests",
             "type": "node",
-            "request": "launch",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
-            "args": [
-                "--runInBand", "--coverage", "false"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "request": "attach",
+            "name": "Docker: Attach to Node",
+            "remoteRoot": "/usr/clean-node-api",
+            "port": 9222,
+            "restart": true
         }
     ]
 }
