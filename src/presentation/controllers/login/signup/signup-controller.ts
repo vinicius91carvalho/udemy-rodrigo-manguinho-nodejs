@@ -1,5 +1,5 @@
 
-import { EmailInUserError } from '../../../errors'
+import { EmailInUseError } from '../../../errors'
 import { badRequest, forbidden, ok, serverError } from '../../../helpers/http/http-helper'
 import { Validation } from '../../../protocols'
 import { Authentication } from '../login/login-controller-protocols'
@@ -26,7 +26,7 @@ export class SignUpController implements Controller {
       })
 
       if (!account) {
-        return forbidden(new EmailInUserError())
+        return forbidden(new EmailInUseError())
       }
 
       const accessToken = await this.authentication.auth({
