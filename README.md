@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/vinicius91carvalho/udemy-rodrigo-manguinho-nodejs.svg?branch=main)](https://travis-ci.com/vinicius91carvalho/udemy-rodrigo-manguinho-nodejs)
+[![Coverage Status](https://coveralls.io/repos/github/vinicius91carvalho/udemy-rodrigo-manguinho-nodejs/badge.svg?branch=main)](https://coveralls.io/github/vinicius91carvalho/udemy-rodrigo-manguinho-nodejs?branch=main)
 # **Clean Node API**
 
 ---
