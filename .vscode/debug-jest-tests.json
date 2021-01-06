@@ -10,7 +10,8 @@
                 "--runInBand", "--coverage", "false"
             ],
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "runtimeExecutable": "/Users/viniciuscarvalho/.asdf/shims/node"
         }
     ]
 }
