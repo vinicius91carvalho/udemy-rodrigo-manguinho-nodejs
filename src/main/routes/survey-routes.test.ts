@@ -36,7 +36,8 @@ describe('Survey Routes', () => {
             image: 'http://image-name.com'
           }, {
             answer: 'Answer 2'
-          }]
+          }],
+          date: new Date()
         })
         .expect(403)
     })
