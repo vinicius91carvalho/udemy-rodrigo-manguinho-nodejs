@@ -6,6 +6,7 @@ import { SaveSurveyResult, SaveSurveyResultParams } from '@/domain/usecases/surv
 import { AddSurveyParams , AddSurvey } from '@/domain/usecases/survey/add-survey'
 import { LoadSurveyById } from '@/domain/usecases/survey/load-survey-by-id'
 import { LoadSurveys } from '@/domain/usecases/survey/load-surveys'
+import { LoadSurveyResult } from '@/domain/usecases/survey-result/load-survey-result'
 
 export const mockAddSurvey = (): AddSurvey => {
   class AddSurveyStub implements AddSurvey {
@@ -43,4 +44,13 @@ export const mockSaveSurveyResult = (): SaveSurveyResult => {
     }
   }
   return new SaveSurveyResultStub()
+}
+
+export const mockLoadSurveyResult = (): LoadSurveyResult => {
+  class LoadSurveyResultStub implements LoadSurveyResult {
+    async load (surveyId: string): Promise<SurveyResultModel> {
+      return mockSurveyResultModel()
+    }
+  }
+  return new LoadSurveyResultStub()
 }
