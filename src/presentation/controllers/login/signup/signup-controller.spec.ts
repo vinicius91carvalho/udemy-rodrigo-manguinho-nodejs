@@ -4,6 +4,7 @@ import { EmailInUseError, MissingParamError, ServerError } from '@/presentation/
 import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers/http/http-helper'
 import { mockValidation } from '@/presentation/test/mock-validation'
 import { mockAddAccount, mockAuthentication } from '@/presentation/test'
+import { mockAuthenticationModel } from '@/domain/test'
 
 const mockRequest = (): HttpRequest => ({
   body: {
@@ -69,7 +70,7 @@ describe('SignUp Controller', () => {
   test('Should return 200 if valid data is provided', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(mockRequest())
-    expect(httpResponse).toEqual(ok({ accessToken: 'any_token' }))
+    expect(httpResponse).toEqual(ok(mockAuthenticationModel()))
   })
 
   test('Should call Validation with correct value', async () => {
