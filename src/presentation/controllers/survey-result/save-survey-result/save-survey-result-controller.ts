@@ -1,6 +1,6 @@
 import { InvalidParamError } from '@/presentation/errors'
 import { forbidden, ok, serverError } from '@/presentation/helpers/http/http-helper'
-import { Controller, HttpRequest, HttpResponse, LoadSurveyById, SaveSurveyResult, SurveyAnswer } from './save-survey-result-protocols'
+import { Controller, HttpRequest, HttpResponse, LoadSurveyById, SaveSurveyResult, SurveyAnswerModel } from './save-survey-result-protocols'
 
 export class SaveSurveyResultController implements Controller {
   constructor (
@@ -30,7 +30,7 @@ export class SaveSurveyResultController implements Controller {
     }
   }
 
-  private isValidAnswer (answers: SurveyAnswer[], answer: string): SurveyAnswer {
+  private isValidAnswer (answers: SurveyAnswerModel[], answer: string): SurveyAnswerModel {
     return answers.find(surveyAnswer => surveyAnswer.answer === answer)
   }
 }
